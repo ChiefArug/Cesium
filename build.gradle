@@ -7,13 +7,13 @@ plugins {
 }
 
 mixin {
-    add sourceSets.main, 'cesium.refmap.json'
-    config 'cesium.mixins.json'
+    add sourceSets.main, 'darmstadtium.refmap.json'
+    config 'darmstadtium.mixins.json'
     debug.export = true
 }
 
-group = 'chiefarug.mods.cesium'
-archivesBaseName = 'cesium'
+group = 'chiefarug.mods.darmstadtium'
+archivesBaseName = "darmstadtium-${minecraft_version}"
 jarJar.enable()
 
 
@@ -31,9 +31,9 @@ minecraft {
 
             property 'forge.logging.markers', 'REGISTRIES'
             property 'forge.logging.console.level', 'debug'
-            property 'forge.enabledGameTestNamespaces', 'cesium'
+            property 'forge.enabledGameTestNamespaces', 'darmstadtium'
             mods {
-                cesium {
+                darmstadtium {
                     source sourceSets.main
 
                 }
@@ -74,14 +74,14 @@ dependencies {
 }
 
 final manifestAttributes = [
-        'Specification-Title'   : 'Cesium',
+        'Specification-Title'   : 'Darmstadtium',
         'Specification-Vendor'  : 'ChiefArug',
         'Specification-Version' : '1',
         'Implementation-Title'  : project.name,
         'Implementation-Version': project.jar.archiveVersion,
         'Implementation-Vendor' : 'ChiefArug'
 ]
-manifestAttributes.put('MixinConfigs', 'cesium.mixins.json')
+manifestAttributes.put('MixinConfigs', 'darmstadtium.mixins.json')
 
 jar {
     manifest.attributes(manifestAttributes)

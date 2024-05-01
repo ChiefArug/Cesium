@@ -1,26 +1,22 @@
-package chiefarug.mods.cesium;
+package chiefarug.mods.darmstadtium;
 
-import com.mojang.logging.LogUtils;
 import net.minecraft.client.Minecraft;
 import net.minecraftforge.common.ForgeConfigSpec;
-import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-import org.slf4j.Logger;
 
-@Mod(Cesium.MODID)
-public class Cesium {
-	public static final String MODID = "cesium";
+@Mod(Darmstadtium.MODID)
+public class Darmstadtium {
+	public static final String MODID = "darmstadtium";
 	private final ForgeConfigSpec.BooleanValue yeetSmartCull;
 	private final ForgeConfigSpec.BooleanValue yeetFOVChecks;
-	private static Cesium instance;
+	private static Darmstadtium instance;
 
 
-	public Cesium() {
+	public Darmstadtium() {
 		ForgeConfigSpec.Builder builder = new ForgeConfigSpec.Builder();
 		builder.comment("Note: This config file is NOT hot reloadable. You must restart the game for everything to take effect!");
 		builder.push("Config");
